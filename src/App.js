@@ -31,14 +31,16 @@ const App = () => {
 
   return (
     <div className='categories-container'>
-      {categories.map(({ id, title, imageUrl }) => (
-        <div className='category-container' key={id}>
+      {categories.map((category) => (
+        <div className='category-container' key={category.id}>
           <div
             className='background-image'
-            style={{ backgroundImage: `url(${imageUrl})` }}
+            style={{ backgroundImage: `url(${category.imageUrl})` }}
           />
+
+
           <div className='category-body-container'>
-            <h2>{title}</h2>
+            <h2>{category.title}</h2>
             <p>Shop Now</p>
           </div>
         </div>
